@@ -7,7 +7,7 @@ from zipfile import ZipFile
 
 
 bucket_name = 'dmc-proyecto-big-data-24'
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './proyecto-big-data-24-2ba1fba24bbb.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/var/lib/jenkins/workspace/proyecto-big-data-24-2ba1fba24bbb.json'
 storage_client = storage.Client()
 # Accediendo al bucket
 bucket_proyecto = storage_client.get_bucket('dmc-proyecto-big-data-24')
