@@ -8,7 +8,7 @@ for variable in "${list_variable[@]}"; do
     for year in "${list_year[@]}"; do
         for mounth in "${list_mounth[@]}"; do
             /usr/bin/python3 CDSAPI_VAR_METEREOLOGICAS.py $mounth $colores $variable
-            sleep (5)
+            sleep 5
 done    
 done
 done
