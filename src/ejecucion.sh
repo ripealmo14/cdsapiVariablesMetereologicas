@@ -8,7 +8,7 @@ script_python="CDSAPI_VAR_METEREOLOGICAS.py"
 for variable in "${list_variable[@]}"; do
     for year in "${list_year[@]}"; do
         for mounth in "${list_mounth[@]}"; do
-            sudo /usr/bin/python3 "$script_python" "$mounth" "$colores" "$variable" | tee salida_ejecucion.txt
+            sudo /usr/bin/python3 "$script_python" "$mounth" "$year" "$variable" | tee salida_ejecucion.txt
             sleep 5
 done    
 done
