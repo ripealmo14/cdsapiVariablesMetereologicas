@@ -71,10 +71,12 @@ def main(arg):
     path_file = './Data'
     if not os.path.exists(path_zip):
         os.mkdir(path_zip)
+        os.chmod(path_zip, 0o666)
 
     if not os.path.exists(path_file):
-        os.mkdir(path_file)   
-        
+        os.mkdir(path_file)
+        os.chmod(path_file, 0o666)   
+
     c.retrieve(
         'sis-agrometeorological-indicators',
         {
