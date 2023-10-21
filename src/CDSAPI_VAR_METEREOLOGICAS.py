@@ -69,6 +69,12 @@ def main(arg):
     file_cdsapi_zip = file_cdsapi + '.zip'
     path_zip = './DataZip'
     path_file = './Data'
+    if not os.path.exists(path_zip):
+        os.mkdir(path_zip)
+
+    if not os.path.exists(path_file):
+        os.mkdir(path_file)   
+        
     c.retrieve(
         'sis-agrometeorological-indicators',
         {
@@ -87,6 +93,7 @@ def main(arg):
         os.path.join(path_zip , file_cdsapi_zip))
     
     path_bucket = 'datalake/workload/cdsapi/' + variable + '/'
+
     descomprimir(path_zip,file_cdsapi_zip, path_file)
 
     #Envio de archivos a la capa Workload
