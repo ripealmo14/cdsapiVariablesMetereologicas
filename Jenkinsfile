@@ -24,11 +24,7 @@ pipeline{
         stage ('Deploy'){
             steps{
                 echo "DEPLOY stage disabled"
-                script {
-                    def carpeta = './src' // Nombre de la carpeta
-
-                    sh "chmod ${permisos} 777"
-                }
+                
             }
             
         }
